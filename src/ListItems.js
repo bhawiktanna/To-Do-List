@@ -11,7 +11,7 @@ function ListItems(props) {
                     <input type="text"
                         id={item.text}
                         value={item.text}
-                        changed={(event) => props.changed(event,item.key)}
+                        onChange={(event) => props.changed(event,item.key)}
                         />
                      
                        

@@ -111,7 +111,8 @@ class App extends React.Component{
           </form>
           <ListItems items={this.state.items}
             deleteItem={this.deleteItem}
-           changed = {this.setUpdate}
+              changed={this.setUpdate}
+              onChange = {this.setUpdate}
             />
           </header>
           
