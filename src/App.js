@@ -77,6 +77,23 @@ class App extends React.Component{
 
   // }
 
+  setUpdate = (event, key) => { 
+    const itemIndex = this.state.items.findIndex(p => {
+      return p.key === key;
+    })
+    const item = {
+      ...this.state.items[itemIndex]
+    };
+    item.text = event.target.value;
+    const items = [...this.state.items];
+    items[itemIndex] = item;
+
+    this.setState({
+      items: items
+    });
+
+  };
+
   render() {
 
     return (
@@ -94,7 +111,7 @@ class App extends React.Component{
           </form>
           <ListItems items={this.state.items}
             deleteItem={this.deleteItem}
-           
+           changed = {this.setUpdate}
             />
           </header>
           
