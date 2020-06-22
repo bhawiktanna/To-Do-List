@@ -116,7 +116,6 @@ class App extends React.Component{
           </header>
           
         </div>
-        <p id="note-para"><span id="note">Note:&nbsp; </span>This is my first React App</p>
        
       </div>
       
