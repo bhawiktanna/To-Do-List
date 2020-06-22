@@ -10,13 +10,9 @@ function ListItems(props) {
                 <p>
                     <input type="text"
                         id={item.text}
-                        value={item.text}
-                        onChange={
-                            (e) => {
-                                props.setUpdate(e.target.value,
-                                    item.key);
-                            }
-                        }/>
+                        value={item.text} />
+                     
+                       
                 
                     <span>
                         <FontAwesomeIcon className="faicons"
@@ -39,3 +35,10 @@ function ListItems(props) {
 }
 
 export default ListItems;
+
+   // onChange={
+                        //     (e) => {
+                        //         props.setUpdate(e.target.value,
+                        //             item.key);
+                        //     }
+                        // }

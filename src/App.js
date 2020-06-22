@@ -21,7 +21,7 @@ class App extends React.Component{
     this.handleInput = this.handleInput.bind(this);
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
-    this.setUpdate = this.setUpdate.bind(this);
+    // this.setUpdate = this.setUpdate.bind(this);
 
   }
 
@@ -57,22 +57,35 @@ class App extends React.Component{
     })
   }
 
-  setUpdate(text, key) {
-    const items = this.state.items;
-    items.map(item => {
-      if (item.key === key) {
-        item.text = text;
-      }
-      this.setState({
-        items: items
-      })
-    })
-  }
+  // setUpdate(text, key) {
+  //   const items = this.state.items;
+  //   items.map(item => {
+  //     if (item.key === key) {
+  //       item.text = text;
+  //     }
+  //     this.setState({
+  //       items: items
+  //     })
+  //   })
+
+    // items.filter(item => item.key === key)
+    //   .map(item => {
+    //     this.setState({
+    //        items:items
+    //      })
+    //   })
+
+  // }
 
   render() {
+
     return (
-     <div className="App">
-      <header>
+      <div>
+        <h1 className="head">To-Do-List App</h1>
+      <div className="App">
+        
+        <header>
+          
         <form id="to-do-form" onSubmit={this.addItem}>
             <input type="text" placeholder="Enter Text"
               value={this.state.currentItem.text}
@@ -81,13 +94,17 @@ class App extends React.Component{
           </form>
           <ListItems items={this.state.items}
             deleteItem={this.deleteItem}
-            setUpdate = {this.setUpdate}
+           
             />
-        </header>
+          </header>
+          
+        </div>
+        <p id="note-para"><span id="note">Note:&nbsp; </span>This is my first React App</p>
+       
       </div>
       
     );
   }
 }
-
+// setUpdate = { this.setUpdate }
 export default App;
